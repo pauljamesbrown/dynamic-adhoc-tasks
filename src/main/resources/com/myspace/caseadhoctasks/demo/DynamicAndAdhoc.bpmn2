@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:drools="http://www.jboss.org/drools" id="_0wKUYVIlEemXqajFJOyIxw" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Designer" exporterVersion="1.0" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_tVSo0FImEemXqajFJOyIxw" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Designer" exporterVersion="1.0" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
   <bpmn2:itemDefinition id="_caseFile_statusItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__milestoneTask_TaskNameInputXItem" structureRef="String"/>
-  <bpmn2:itemDefinition id="__milestoneTask_ConditionInputXItem" structureRef="Object"/>
+  <bpmn2:itemDefinition id="__milestoneTask_ConditionInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__D7F4332A-8592-4F33-B3AB-27936547AF1F_TaskNameInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__D7F4332A-8592-4F33-B3AB-27936547AF1F_ConditionInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__20030491-E1F0-43F1-8275-2CFC6D9956FE_TaskNameInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__20030491-E1F0-43F1-8275-2CFC6D9956FE_ConditionInputXItem" structureRef="String"/>
   <bpmn2:process id="com.myspace.caseadhoctasks.demo.DynamicAndAdhoc" drools:adHoc="true" drools:packageName="com.myspace.caseadhoctasks.demo" drools:version="1.0" name="DynamicAndAdhoc" isExecutable="true">
     <bpmn2:extensionElements>
       <drools:metaData name="customCaseIdPrefix">
@@ -10,53 +14,210 @@
       </drools:metaData>
     </bpmn2:extensionElements>
     <bpmn2:property id="caseFile_status" itemSubjectRef="_caseFile_statusItem"/>
-    <bpmn2:task id="_milestoneTask" drools:selectable="true" drools:taskName="Milestone" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Milestone">
+    <bpmn2:task id="_milestoneTask" drools:selectable="true" drools:taskName="Milestone" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Initialised">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
-          <drools:metaValue><![CDATA[Milestone]]></drools:metaValue>
+          <drools:metaValue><![CDATA[Initialised]]></drools:metaValue>
         </drools:metaData>
         <drools:metaData name="customAutoStart">
           <drools:metaValue><![CDATA[true]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
-      <bpmn2:ioSpecification id="_0wQbAFIlEemXqajFJOyIxw">
+      <bpmn2:ioSpecification id="_tVTP4FImEemXqajFJOyIxw">
         <bpmn2:dataInput id="_milestoneTask_TaskNameInputX" drools:dtype="String" itemSubjectRef="__milestoneTask_TaskNameInputXItem" name="TaskName"/>
-        <bpmn2:dataInput id="_milestoneTask_ConditionInputX" drools:dtype="Object" itemSubjectRef="__milestoneTask_ConditionInputXItem" name="Condition"/>
-        <bpmn2:inputSet id="_0wQbAVIlEemXqajFJOyIxw">
+        <bpmn2:dataInput id="_milestoneTask_ConditionInputX" drools:dtype="String" itemSubjectRef="__milestoneTask_ConditionInputXItem" name="Condition"/>
+        <bpmn2:inputSet id="_tVTP4VImEemXqajFJOyIxw">
           <bpmn2:dataInputRefs>_milestoneTask_ConditionInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_milestoneTask_TaskNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_0wQbAlIlEemXqajFJOyIxw"/>
+        <bpmn2:outputSet id="_tVT28FImEemXqajFJOyIxw"/>
       </bpmn2:ioSpecification>
-      <bpmn2:dataInputAssociation id="_0wQbA1IlEemXqajFJOyIxw">
+      <bpmn2:dataInputAssociation id="_tVT28VImEemXqajFJOyIxw">
         <bpmn2:targetRef>_milestoneTask_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_0wQbBFIlEemXqajFJOyIxw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_0wRCEFIlEemXqajFJOyIxw"><![CDATA[Milestone]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_0wRCEVIlEemXqajFJOyIxw">_milestoneTask_TaskNameInputX</bpmn2:to>
+        <bpmn2:assignment id="_tVT28lImEemXqajFJOyIxw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_tVT281ImEemXqajFJOyIxw"><![CDATA[Milestone]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_tVT29FImEemXqajFJOyIxw">_milestoneTask_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_0wRCElIlEemXqajFJOyIxw">
+      <bpmn2:dataInputAssociation id="_tVT29VImEemXqajFJOyIxw">
         <bpmn2:targetRef>_milestoneTask_ConditionInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_0wRCE1IlEemXqajFJOyIxw">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_0wRCFFIlEemXqajFJOyIxw"></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_0wRCFVIlEemXqajFJOyIxw">_milestoneTask_ConditionInputX</bpmn2:to>
+        <bpmn2:assignment id="_tVT29lImEemXqajFJOyIxw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_tVT291ImEemXqajFJOyIxw"><![CDATA[org.kie.api.runtime.process.CaseData(data.get("status") == "Created")]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_tVT2-FImEemXqajFJOyIxw">_milestoneTask_ConditionInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
     </bpmn2:task>
+    <bpmn2:task id="_D7F4332A-8592-4F33-B3AB-27936547AF1F" drools:selectable="true" drools:taskName="Milestone" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Medical Assessment Completed">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Medical Assessment Completed]]></drools:metaValue>
+        </drools:metaData>
+        <drools:metaData name="customAutoStart">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_tVT2-VImEemXqajFJOyIxw">
+        <bpmn2:dataInput id="_D7F4332A-8592-4F33-B3AB-27936547AF1F_TaskNameInputX" drools:dtype="String" itemSubjectRef="__D7F4332A-8592-4F33-B3AB-27936547AF1F_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="_D7F4332A-8592-4F33-B3AB-27936547AF1F_ConditionInputX" drools:dtype="String" itemSubjectRef="__D7F4332A-8592-4F33-B3AB-27936547AF1F_ConditionInputXItem" name="Condition"/>
+        <bpmn2:inputSet id="_tVT2-lImEemXqajFJOyIxw">
+          <bpmn2:dataInputRefs>_D7F4332A-8592-4F33-B3AB-27936547AF1F_ConditionInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_D7F4332A-8592-4F33-B3AB-27936547AF1F_TaskNameInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_tVT2-1ImEemXqajFJOyIxw"/>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_tVT2_FImEemXqajFJOyIxw">
+        <bpmn2:targetRef>_D7F4332A-8592-4F33-B3AB-27936547AF1F_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_tVT2_VImEemXqajFJOyIxw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_tVT2_lImEemXqajFJOyIxw"><![CDATA[Milestone]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_tVT2_1ImEemXqajFJOyIxw">_D7F4332A-8592-4F33-B3AB-27936547AF1F_TaskNameInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_tVT3AFImEemXqajFJOyIxw">
+        <bpmn2:targetRef>_D7F4332A-8592-4F33-B3AB-27936547AF1F_ConditionInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_tVT3AVImEemXqajFJOyIxw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_tVT3AlImEemXqajFJOyIxw"></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_tVT3A1ImEemXqajFJOyIxw">_D7F4332A-8592-4F33-B3AB-27936547AF1F_ConditionInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:task>
+    <bpmn2:task id="_20030491-E1F0-43F1-8275-2CFC6D9956FE" drools:selectable="true" drools:taskName="Milestone" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Invoices Completed">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Invoices Completed]]></drools:metaValue>
+        </drools:metaData>
+        <drools:metaData name="customAutoStart">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:ioSpecification id="_tVT3BFImEemXqajFJOyIxw">
+        <bpmn2:dataInput id="_20030491-E1F0-43F1-8275-2CFC6D9956FE_TaskNameInputX" drools:dtype="String" itemSubjectRef="__20030491-E1F0-43F1-8275-2CFC6D9956FE_TaskNameInputXItem" name="TaskName"/>
+        <bpmn2:dataInput id="_20030491-E1F0-43F1-8275-2CFC6D9956FE_ConditionInputX" drools:dtype="String" itemSubjectRef="__20030491-E1F0-43F1-8275-2CFC6D9956FE_ConditionInputXItem" name="Condition"/>
+        <bpmn2:inputSet id="_tVT3BVImEemXqajFJOyIxw">
+          <bpmn2:dataInputRefs>_20030491-E1F0-43F1-8275-2CFC6D9956FE_ConditionInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_20030491-E1F0-43F1-8275-2CFC6D9956FE_TaskNameInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_tVT3BlImEemXqajFJOyIxw"/>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_tVT3B1ImEemXqajFJOyIxw">
+        <bpmn2:targetRef>_20030491-E1F0-43F1-8275-2CFC6D9956FE_TaskNameInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_tVT3CFImEemXqajFJOyIxw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_tVT3CVImEemXqajFJOyIxw"><![CDATA[Milestone]]></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_tVT3ClImEemXqajFJOyIxw">_20030491-E1F0-43F1-8275-2CFC6D9956FE_TaskNameInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_tVT3C1ImEemXqajFJOyIxw">
+        <bpmn2:targetRef>_20030491-E1F0-43F1-8275-2CFC6D9956FE_ConditionInputX</bpmn2:targetRef>
+        <bpmn2:assignment id="_tVT3DFImEemXqajFJOyIxw">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_tVT3DVImEemXqajFJOyIxw"></bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_tVT3DlImEemXqajFJOyIxw">_20030491-E1F0-43F1-8275-2CFC6D9956FE_ConditionInputX</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:task>
+    <bpmn2:startEvent id="_D45C111F-23A1-4ED3-A2A8-AB8A2C38FE9B" drools:selectable="true" color:background-color="#9acd32" color:border-color="#000000" color:color="#000000" name="">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:outgoing>_E37F4058-6335-447C-979D-4B4353EB0F13</bpmn2:outgoing>
+    </bpmn2:startEvent>
+    <bpmn2:scriptTask id="_D2E9E5C1-73E7-435E-870C-EB3661541404" drools:selectable="true" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Case Initialised" scriptFormat="http://www.java.com/java">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Case Initialised]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_E37F4058-6335-447C-979D-4B4353EB0F13</bpmn2:incoming>
+      <bpmn2:script><![CDATA[System.out.println("New Case Created");
+kcontext.setVariable("caseFile_status", "Created");
+System.out.println("Case milestone updated");]]></bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:sequenceFlow id="_E37F4058-6335-447C-979D-4B4353EB0F13" drools:selectable="true" color:background-color="#000000" color:border-color="#000000" color:color="#000000" sourceRef="_D45C111F-23A1-4ED3-A2A8-AB8A2C38FE9B" targetRef="_D2E9E5C1-73E7-435E-870C-EB3661541404"/>
   </bpmn2:process>
-  <bpmndi:BPMNDiagram id="_0wRCFlIlEemXqajFJOyIxw">
-    <bpmndi:BPMNPlane id="_0wRCF1IlEemXqajFJOyIxw" bpmnElement="com.myspace.caseadhoctasks.demo.DynamicAndAdhoc">
-      <bpmndi:BPMNShape id="_0wRCGFIlEemXqajFJOyIxw" bpmnElement="_milestoneTask">
-        <dc:Bounds height="80.0" width="100.0" x="90.0" y="90.0"/>
+  <bpmndi:BPMNDiagram id="_tVT3D1ImEemXqajFJOyIxw">
+    <bpmndi:BPMNPlane id="_tVT3EFImEemXqajFJOyIxw" bpmnElement="com.myspace.caseadhoctasks.demo.DynamicAndAdhoc">
+      <bpmndi:BPMNShape id="_tVT3EVImEemXqajFJOyIxw" bpmnElement="_milestoneTask">
+        <dc:Bounds height="80.0" width="100.0" x="240.0" y="90.0"/>
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_tVT3ElImEemXqajFJOyIxw" bpmnElement="_D7F4332A-8592-4F33-B3AB-27936547AF1F">
+        <dc:Bounds height="80.0" width="100.0" x="396.0" y="90.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_tVT3E1ImEemXqajFJOyIxw" bpmnElement="_20030491-E1F0-43F1-8275-2CFC6D9956FE">
+        <dc:Bounds height="80.0" width="100.0" x="569.0" y="90.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_tVT3FFImEemXqajFJOyIxw" bpmnElement="_D45C111F-23A1-4ED3-A2A8-AB8A2C38FE9B">
+        <dc:Bounds height="30.0" width="30.0" x="67.0" y="254.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_tVT3FVImEemXqajFJOyIxw" bpmnElement="_D2E9E5C1-73E7-435E-870C-EB3661541404">
+        <dc:Bounds height="80.0" width="100.0" x="180.0" y="229.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="_tVT3FlImEemXqajFJOyIxw" bpmnElement="_E37F4058-6335-447C-979D-4B4353EB0F13" sourceElement="_tVT3FFImEemXqajFJOyIxw" targetElement="_tVT3FVImEemXqajFJOyIxw">
+        <di:waypoint xsi:type="dc:Point" x="82.0" y="269.0"/>
+        <di:waypoint xsi:type="dc:Point" x="230.0" y="269.0"/>
+      </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_0wRCGVIlEemXqajFJOyIxw" type="BPSimData">
+  <bpmn2:relationship id="_tVT3F1ImEemXqajFJOyIxw" type="BPSimData">
     <bpmn2:extensionElements>
       <bpsim:BPSimData>
         <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
           <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters" baseTimeUnit="min"/>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_milestoneTask" id="_0wRCGlIlEemXqajFJOyIxw">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_D7F4332A-8592-4F33-B3AB-27936547AF1F" id="_tVUeAFImEemXqajFJOyIxw">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:UniformDistribution max="10.0" min="5.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_20030491-E1F0-43F1-8275-2CFC6D9956FE" id="_tVUeAVImEemXqajFJOyIxw">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:UniformDistribution max="10.0" min="5.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_E37F4058-6335-447C-979D-4B4353EB0F13" id="_tVUeAlImEemXqajFJOyIxw">
+            <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
+              <bpsim:Probability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="100.0"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_milestoneTask" id="_tVUeA1ImEemXqajFJOyIxw">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:UniformDistribution max="10.0" min="5.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_D45C111F-23A1-4ED3-A2A8-AB8A2C38FE9B" id="_tVUeBFImEemXqajFJOyIxw">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:UniformDistribution max="10.0" min="5.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
+              <bpsim:Probability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="100.0"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_D2E9E5C1-73E7-435E-870C-EB3661541404" id="_tVUeBVImEemXqajFJOyIxw">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
@@ -71,7 +232,7 @@
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_0wKUYVIlEemXqajFJOyIxw</bpmn2:source>
-    <bpmn2:target>_0wKUYVIlEemXqajFJOyIxw</bpmn2:target>
+    <bpmn2:source>_tVSo0FImEemXqajFJOyIxw</bpmn2:source>
+    <bpmn2:target>_tVSo0FImEemXqajFJOyIxw</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
