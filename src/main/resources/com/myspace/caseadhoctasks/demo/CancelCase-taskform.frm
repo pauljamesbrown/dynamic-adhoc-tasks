@@ -1,0 +1,1 @@
+{"id":"c9773509-4b68-420c-86ea-4eb8405b4313","name":"CancelCase-taskform.frm","model":{"taskName":"CancelCase","processId":"com.myspace.caseadhoctasks.demo.DynamicAndAdhoc","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":2,"style":"FLUID","layoutProperties":{},"rows":[]}}
