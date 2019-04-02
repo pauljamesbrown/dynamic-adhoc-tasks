@@ -3,17 +3,17 @@
     <repository>
       <include>true</include>
       <metadata>
-        <id>mvnCentral</id>
-        <url>http://central.maven.org/maven2/</url>
-        <source>SETTINGS</source>
+        <id>central</id>
+        <url>https://repo.maven.apache.org/maven2</url>
+        <source>PROJECT</source>
       </metadata>
     </repository>
     <repository>
       <include>true</include>
       <metadata>
-        <id>central</id>
-        <url>https://repo.maven.apache.org/maven2</url>
-        <source>PROJECT</source>
+        <id>mvnCentral</id>
+        <url>http://central.maven.org/maven2/</url>
+        <source>SETTINGS</source>
       </metadata>
     </repository>
     <repository>
