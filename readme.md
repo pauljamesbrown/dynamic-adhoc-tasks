@@ -1,15 +1,15 @@
-#### Dynamic & Adhoc Task Example RHPAM Process.
+## Dynamic & Adhoc Task Example RHPAM Process.
 
 **Note:** This process was developed using RHPAM 7.2
 
 This simple example is intended to demonstrate how you can combine structure workflow (i.e sequential steps) with totally unstructure tasks i.e tasks that do not exist at design or runtime time and are created on the fly.
 
-##### Pre-Requisities:
+### Pre-Requisities:
 
 1 - All human tasks have been assigned to the admin group
 2 - Basic Authentication is required to invoke the Kie-Server api. The user must have permission to the kie-server group.
 
-##### Process Explanation.
+### Process Explanation.
 
 The process is a case definition (as opposed to a standard bpm process). To create a new case invoke the create case kie-server api: 
 
