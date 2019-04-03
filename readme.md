@@ -9,6 +9,8 @@ This simple example is intended to demonstrate how you can combine structure wor
 1 - All human tasks have been assigned to the admin group
 2 - Basic Authentication is required to invoke the Kie-Server api. The user must have permission to the kie-server group.
 
+[!Process Diagram Image](https://github.com/pauljamesbrown/dynamic-adhoc-tasks/blob/master/src/main/resources/com/myspace/caseadhoctasks/demo/com.myspace.caseadhoctasks.demo.DynamicAndAdhoc-image.png)
+
 ### Process Explanation.
 
 The process is a case definition (as opposed to a standard bpm process). To create a new case invoke the create case kie-server api: 
