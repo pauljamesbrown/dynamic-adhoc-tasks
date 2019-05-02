@@ -2,7 +2,7 @@
 
 **Note:** This process was developed using RHPAM 7.2
 
-This simple example is intended to demonstrate how you can combine structure workflow (i.e sequential steps) with totally unstructure tasks i.e tasks that do not exist at design or runtime time and are created on the fly.
+This simple example is intended to demonstrate how you can combine structured workflow (i.e sequential steps) with totally unstructure tasks i.e tasks that do not exist at design time and instead created on the fly at runtime .
 
 ### Pre-Requisities:
 
